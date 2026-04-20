@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Fire Safety Checklist — Free Printable | ReadThisFirst.in</title>
+<meta name="description" content="Free printable A4 home fire safety checklist for India — 42 checks, room by room. Print and display at home. Based on IS 2190:2024 and NDMA guidelines.">
+<link rel="canonical" href="https://readthisfirst.in/tools/fire-safety-checklist-printable/">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --fire:#B8291A;--ink:#1C1A17;--ink-2:#3D3A34;--ink-3:#6B6760;
+  --paper:#FFFDF9;--paper-2:#F5F0E8;--paper-3:#E8E1D4;
+  --green:#1A6B30;--amber:#92400E;--teal:#0F5E74;
+  --serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
+}
+
+/* SCREEN wrapper */
+body{font-family:var(--sans);background:#E8E1D4;min-height:100vh;padding:24px;display:flex;flex-direction:column;align-items:center;gap:16px}
+
+.screen-header{background:var(--ink);color:#fff;border-radius:8px;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;width:100%;max-width:800px}
+.sh-title{font-family:var(--serif);font-size:16px;font-weight:700}
+.sh-sub{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px}
+.btn-print{background:var(--fire);color:#fff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:4px;border:none;cursor:pointer;font-family:var(--sans);white-space:nowrap}
+.btn-print:hover{background:#922B21}
+
+/* A4 PAGE */
+.page{
+  width:210mm;min-height:297mm;
+  background:var(--paper);
+  border-radius:4px;
+  overflow:hidden;
+  font-family:var(--sans);
+}
+
+/* PAGE HEADER */
+.pg-header{background:var(--ink);padding:18px 24px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.pg-logo{font-family:var(--serif);font-size:14px;color:#fff;font-weight:700;opacity:.6}
+.pg-logo span{color:#E57369;opacity:1}
+.pg-title-wrap{text-align:center;flex:1}
+.pg-title{font-family:var(--serif);font-size:22px;color:#fff;font-weight:800;line-height:1.1}
+.pg-title em{color:#E57369;font-style:normal}
+.pg-subtitle{font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+.pg-badge{text-align:right;font-size:10px;color:rgba(255,255,255,.4);line-height:1.4}
+
+/* INTRO STRIP */
+.intro-strip{background:var(--paper-2);padding:8px 24px;border-bottom:1px solid var(--paper-3);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.intro-stat{text-align:center}
+.is-n{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--fire)}
+.is-l{font-size:9px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.08em;margin-top:1px}
+.intro-divider{width:1px;height:32px;background:var(--paper-3)}
+.intro-text{font-size:9px;color:var(--ink-3);line-height:1.55;flex:1;min-width:200px}
+.intro-text strong{color:var(--ink-2)}
+
+/* COLUMNS */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0}
+.col{padding:10px 12px 6px}
+.col:first-child{border-right:1px solid var(--paper-3)}
+
+/* SECTION */
+.section{margin-bottom:10px}
+.section-head{display:flex;align-items:center;gap:8px;margin-bottom:6px;padding-bottom:5px;border-bottom:2px solid currentColor}
+.section-icon{width:22px;height:22px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.section-title{font-family:var(--serif);font-size:12px;font-weight:700}
+.section-count{font-size:9px;margin-left:auto;font-weight:600;padding:2px 6px;border-radius:3px}
+
+/* Colors per section */
+.s-kitchen .section-head{color:var(--amber)}
+.s-kitchen .section-icon{background:#FEF3C7}
+.s-kitchen .section-count{background:#FEF3C7;color:var(--amber)}
+.s-elec .section-head{color:var(--fire)}
+.s-elec .section-icon{background:#FEF2F2}
+.s-elec .section-count{background:#FEF2F2;color:var(--fire)}
+.s-bedroom .section-head{color:var(--teal)}
+.s-bedroom .section-icon{background:#E8F7FA}
+.s-bedroom .section-count{background:#E8F7FA;color:var(--teal)}
+.s-living .section-head{color:#5B21B6}
+.s-living .section-icon{background:#EDE9FE}
+.s-living .section-count{background:#EDE9FE;color:#5B21B6}
+.s-garage .section-head{color:var(--green)}
+.s-garage .section-icon{background:#F0FDF4}
+.s-garage .section-count{background:#F0FDF4;color:var(--green)}
+.s-general .section-head{color:var(--ink-2)}
+.s-general .section-icon{background:var(--paper-2)}
+.s-general .section-count{background:var(--paper-2);color:var(--ink-2)}
+
+/* CHECK ITEMS */
+.check{display:flex;align-items:flex-start;gap:7px;margin-bottom:4px}
+.cb{width:11px;height:11px;min-width:11px;border:1.5px solid var(--paper-3);border-radius:2px;margin-top:1px;flex-shrink:0}
+.ct{font-size:9px;color:var(--ink-2);line-height:1.45}
+.ct .p{font-size:8px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:1px 4px;border-radius:1px;margin-left:3px;vertical-align:middle;display:inline}
+.p-c{background:#FEF2F2;color:var(--fire)}
+.p-h{background:#FFFBEB;color:#92400E}
+
+/* QR + FOOTER */
+.pg-footer{background:var(--ink);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:auto}
+.footer-text{font-size:8px;color:rgba(255,255,255,.45);line-height:1.5}
+.footer-text strong{color:rgba(255,255,255,.7)}
+.footer-emergency{text-align:center}
+.fe-label{font-size:7px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px}
+.fe-nums{display:flex;gap:12px}
+.fe-num{background:var(--fire);color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:3px;font-family:var(--serif)}
+.footer-qr{text-align:right}
+.qr-label{font-size:8px;color:rgba(255,255,255,.35);margin-bottom:4px}
+/* SVG QR placeholder */
+.qr-box{width:44px;height:44px;background:rgba(255,255,255,.1);border-radius:3px;display:flex;align-items:center;justify-content:center;margin-left:auto}
+.qr-box svg{opacity:.5}
+
+@media print{
+  body{background:transparent;padding:0}
+  .screen-header{display:none}
+  .page{border-radius:0;width:100%;box-shadow:none}
+}
+@media screen and (max-width:650px){
+  .page{width:100%;min-height:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="screen-header">
+  <div>
+    <div class="sh-title">Home Fire Safety Checklist — Printable A4</div>
+    <div class="sh-sub">Print this page · Fold and display · Re-check every 6 months</div>
+  </div>
+  <button class="btn-print" onclick="window.print()">⬇ Print / Save as PDF</button>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="pg-header">
+    <div class="pg-logo">ReadThis<span>First</span>.in</div>
+    <div class="pg-title-wrap">
+      <div class="pg-title">Home Fire Safety <em>Checklist</em></div>
+      <div class="pg-subtitle">India · Based on IS 2190:2024 &amp; NDMA Guidelines · Check every 6 months</div>
+    </div>
+    <div class="pg-badge">42 checks<br>6 areas<br>Free to print</div>
+  </div>
+
+  <!-- INTRO STRIP -->
+  <div class="intro-strip">
+    <div class="intro-stat"><div class="is-n">3 min</div><div class="is-l">Room engulfs</div></div>
+    <div class="intro-divider"></div>
+    <div class="intro-stat"><div class="is-n">80%</div><div class="is-l">Fires preventable</div></div>
+    <div class="intro-divider"></div>
+    <div class="intro-stat"><div class="is-n">₹700</div><div class="is-l">Min. ISI extinguisher</div></div>
+    <div class="intro-divider"></div>
+    <div class="intro-text"><strong>Critical:</strong> Never use ABC powder on a cooking oil fire — it spreads flames. Use a fire blanket. Never use water on electrical fires — use CO₂ only. Know your MCB location before a fire, not during one.</div>
+  </div>
+
+  <!-- TWO COLUMN CONTENT -->
+  <div class="cols">
+
+    <!-- LEFT COLUMN -->
+    <div class="col">
+
+      <div class="section s-kitchen">
+        <div class="section-head">
+          <div class="section-icon">🍳</div>
+          <div class="section-title">Kitchen</div>
+          <div class="section-count">9 checks</div>
+        </div>
+        <div class="check"><div class="cb"></div><div class="ct">Fire blanket mounted near exit, not next to hob <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">LPG hose within 5-year replacement date <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">No cloth, paper, or plastic within 30 cm of hob <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">LPG cylinder valve closed when not cooking <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Exhaust fan / window provides cooking ventilation <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Cooking oil never left unattended on hot hob <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">CO₂ extinguisher available for appliance fires <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Chimney / hood filter cleaned in last 3 months</div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Fire 101 &amp; Emergency 112 visible in kitchen</div></div>
+      </div>
+
+      <div class="section s-elec">
+        <div class="section-head">
+          <div class="section-icon">⚡</div>
+          <div class="section-title">Electrical</div>
+          <div class="section-count">8 checks</div>
+        </div>
+        <div class="check"><div class="cb"></div><div class="ct">MCB / RCD distribution board is circuit-labelled <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">No extension board daisy-chained to another <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">No exposed or damaged wire insulation anywhere <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">RCD / ELCB test button pressed — trips correctly <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">High-risk appliances not left on overnight <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Extension boards are IS 1293:2019 rated <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Main MCB location known by all adults <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">CO₂ extinguisher accessible near DB / panel <span class="p p-h">High</span></div></div>
+      </div>
+
+      <div class="section s-bedroom">
+        <div class="section-head">
+          <div class="section-icon">🛏️</div>
+          <div class="section-title">Bedrooms</div>
+          <div class="section-count">8 checks</div>
+        </div>
+        <div class="check"><div class="cb"></div><div class="ct">Smoke detector in each bedroom, tested this month <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Clear escape route from every bedroom identified <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Charged phone accessible at night for 101 / 112 <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">No phones or laptops charged under pillow / mattress <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Curtains at least 30 cm from sockets / switches <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Children know escape plan and assembly point <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">No candles / diyas left burning unattended or overnight <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Bedroom doors closed at night (slows fire spread)</div></div>
+      </div>
+
+    </div><!-- /left col -->
+
+    <!-- RIGHT COLUMN -->
+    <div class="col">
+
+      <div class="section s-living">
+        <div class="section-head">
+          <div class="section-icon">🛋️</div>
+          <div class="section-title">Living Room &amp; Corridors</div>
+          <div class="section-count">7 checks</div>
+        </div>
+        <div class="check"><div class="cb"></div><div class="ct">ABC extinguisher at chest height near main exit <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Extinguisher pressure gauge needle in green zone <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Smoke detector on each floor landing, tested <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Corridor and stairwell completely clear of clutter <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">No candles / diyas near curtains, sofa, or paper <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Assembly point known and agreed by all members <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">House number clearly visible from street</div></div>
+      </div>
+
+      <div class="section s-garage">
+        <div class="section-head">
+          <div class="section-icon">🚗</div>
+          <div class="section-title">Garage &amp; Vehicles</div>
+          <div class="section-count">5 checks</div>
+        </div>
+        <div class="check"><div class="cb"></div><div class="ct">ABC extinguisher (min 2 kg) in garage, accessible <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">No petrol / diesel stored in plastic containers indoors <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">1 kg ABC extinguisher mounted inside each vehicle <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">EV charger is OEM-approved and undamaged <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Flammable materials stored away from vehicles &amp; heat</div></div>
+      </div>
+
+      <div class="section s-general">
+        <div class="section-head">
+          <div class="section-icon">🏠</div>
+          <div class="section-title">Whole-Home Essentials</div>
+          <div class="section-count">5 checks</div>
+        </div>
+        <div class="check"><div class="cb"></div><div class="ct">All extinguishers inspected by IS 2190:2024 technician within 12 months <span class="p p-c">Critical</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Family fire drill conducted within last 6 months <span class="p p-h">High</span></div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Emergency numbers posted visibly: 101 Fire, 112 National</div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Society / building fire equipment verified functional</div></div>
+        <div class="check"><div class="cb"></div><div class="ct">Reminder set to re-check this checklist in 6 months</div></div>
+      </div>
+
+      <!-- LEGEND -->
+      <div style="background:var(--paper-2);border-radius:4px;padding:8px 10px;margin-top:6px;border:1px solid var(--paper-3)">
+        <div style="font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:5px">Priority key</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:4px;font-size:8px;color:var(--ink-3)"><span style="background:#FEF2F2;color:var(--fire);font-size:7px;font-weight:700;padding:1px 5px;border-radius:2px">Critical</span>Fix before anything else</div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:8px;color:var(--ink-3)"><span style="background:#FFFBEB;color:#92400E;font-size:7px;font-weight:700;padding:1px 5px;border-radius:2px">High</span>Fix within 1 week</div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:8px;color:var(--ink-3)"><span style="background:var(--paper-3);color:var(--ink-3);font-size:7px;font-weight:700;padding:1px 5px;border-radius:2px">Standard</span>Good practice</div>
+        </div>
+      </div>
+
+      <!-- KEY PRODUCTS QUICK REF -->
+      <div style="background:var(--paper-2);border-radius:4px;padding:8px 10px;margin-top:8px;border:1px solid var(--paper-3)">
+        <div style="font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:5px">What to buy (scan QR or visit readthisfirst.in)</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+          <div style="font-size:8px;color:var(--ink-2);line-height:1.4"><strong>Kitchen:</strong> Fire blanket IS 15381:2021 + CO₂ 2kg</div>
+          <div style="font-size:8px;color:var(--ink-2);line-height:1.4"><strong>Living room:</strong> ABC 2kg IS 15683:2018</div>
+          <div style="font-size:8px;color:var(--ink-2);line-height:1.4"><strong>Electrical:</strong> CO₂ 2kg — never water or ABC powder</div>
+          <div style="font-size:8px;color:var(--ink-2);line-height:1.4"><strong>Vehicle:</strong> ABC 1kg mounted to structural point</div>
+        </div>
+        <div style="font-size:7px;color:var(--ink-4);margin-top:5px">Verify ISI via BIS CARE app — enter CM/L number. Ceasefire CM/L-8886112 · Kanex CM/L-3802567</div>
+      </div>
+
+    </div><!-- /right col -->
+  </div><!-- /cols -->
+
+  <!-- FOOTER -->
+  <div class="pg-footer">
+    <div class="footer-text"><strong>ReadThisFirst.in</strong> · India's honest independent buying guide<br>Based on IS 2190:2024 · IS 15683:2018 · NDMA Home Fire Safety Guidelines<br>Re-check every 6 months · Last revised April 2026</div>
+    <div class="footer-emergency">
+      <div class="fe-label">Emergency numbers</div>
+      <div class="fe-nums">
+        <div class="fe-num">101 Fire</div>
+        <div class="fe-num">112 Emergency</div>
+      </div>
+    </div>
+    <div class="footer-qr">
+      <div class="qr-label">Interactive checklist</div>
+      <div class="qr-box">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect x="2" y="2" width="12" height="12" rx="1" fill="white" opacity=".6"/>
+          <rect x="4" y="4" width="8" height="8" rx="0.5" fill="white" opacity=".4"/>
+          <rect x="18" y="2" width="12" height="12" rx="1" fill="white" opacity=".6"/>
+          <rect x="20" y="4" width="8" height="8" rx="0.5" fill="white" opacity=".4"/>
+          <rect x="2" y="18" width="12" height="12" rx="1" fill="white" opacity=".6"/>
+          <rect x="4" y="20" width="8" height="8" rx="0.5" fill="white" opacity=".4"/>
+          <rect x="18" y="18" width="4" height="4" rx=".5" fill="white" opacity=".5"/>
+          <rect x="24" y="18" width="4" height="4" rx=".5" fill="white" opacity=".5"/>
+          <rect x="18" y="24" width="4" height="4" rx=".5" fill="white" opacity=".5"/>
+          <rect x="24" y="24" width="4" height="4" rx=".5" fill="white" opacity=".5"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+</body>
+</html>
